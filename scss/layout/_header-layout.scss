@@ -1,0 +1,15 @@
+.main-header img {
+	max-width: 80%;
+}
+
+/* The padding here fixes a problem the left padding caused to the layout. */
+.main-nav ul {
+	padding: 0;
+}
+
+.main-nav li,
+.footerLinks {
+	list-style-type: none;
+	margin-top: 4px;
+	padding: 10px;
+}

@@ -1,0 +1,44 @@
+@media (min-width: 1024px) {
+
+	
+
+    .flex-header {
+    	display: flex;
+    	justify-content: space-between;
+    }
+
+    .flex-header  h1 {
+    	margin-top: -2px;
+    }
+
+    .main-header p {
+    	padding-left: 25px;
+    }
+    
+
+	.container {
+		width: 90%;
+		max-width: 1100px;
+	}
+
+    .main-footer .container {
+    	width: 50%;
+    } 
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+	   color: black;
+	   font-size: 15px;
+	   font-weight: 700;
+    }
+
+
+    .card {
+    	float: left;
+    	width: calc(100% / 3);
+    }
+
+}
+
