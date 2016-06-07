@@ -1,0 +1,19 @@
+
+
+// Mixin for padding
+
+@mixin padding($padding) {
+	padding: $padding;
+}
+
+@mixin tablet {
+  @media #{$media768} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$media1024} {
+    @content;
+  }
+}

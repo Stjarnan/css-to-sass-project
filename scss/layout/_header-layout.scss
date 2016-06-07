@@ -2,14 +2,50 @@
 	max-width: 80%;
 }
 
+.main-header p {
+    	@include tablet {
+    	text-align: left;
+    	}
+
+    	@include desktop{
+    	 padding-left: 25px;
+    	}
+    }
+
+ .flex-header {
+         @include desktop {
+	    	display: flex;
+	    	justify-content: space-between;
+	    	}
+    }
+
+ .flex-header  h1 {
+        @include desktop {
+        	margin-top: -2px;
+        	}
+    }   
+
+.profile {
+		@include tablet {
+		    float: right;
+			padding-left: 20px;
+		}
+	}
+
 /* The padding here fixes a problem the left padding caused to the layout. */
 .main-nav ul {
-	padding: 0;
+	@include padding(0);
 }
+
+.main-nav {
+		@include tablet {
+		  padding-bottom: 50px;
+		}
+	}
 
 .main-nav li,
 .footerLinks {
 	list-style-type: none;
 	margin-top: 4px;
-	padding: 10px;
+	@include padding(10px);
 }

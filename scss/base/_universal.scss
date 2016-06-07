@@ -3,14 +3,14 @@
 }
 
 body {
-	background-color: #F5F5F5;
-	font-family: 'Open Sans', sans-serif;
+	background-color: #lightgrey;
+	font-family: $main-font-stack;
 	font-weight: 300;
 }
 
 
 .clearfix::after {
 	content: " ";
-	display: table;
+	display: $table;
 	clear: both;
 }

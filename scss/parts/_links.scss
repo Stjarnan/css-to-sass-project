@@ -1,40 +1,61 @@
+
+.main-nav li, 
+  a  {
+
+   @include tablet {
+    display: $inline;
+    background-color: #F5F5F5;
+    padding-right: 25px;
+    }
+  }
+
 a {
 	text-decoration: none;
-	display: block;
+	display: $block;
+
+  &.social {
+      display: inline-block;
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px;
+      opacity: .4;
+      transition: all .5s;
+      } 
+
+  &.github {
+      background-image: url(#{$path}/github.svg);
+      }
+  &.googlePlus {
+      background-image: url(#{$path}/google_plus.svg);
+      } 
+
+  &.social:hover {
+      opacity: 1; }
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+      color: black;
+      font-size: $link-font-size;
+      font-weight: 700;
+
+      @include desktop {
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+           color: black;
+           font-size: 15px;
+           font-weight: 700;
+          }
+      }
+    }    
 }
 
 
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-	color: black;
-	font-size: 20px;
-	font-weight: 700;
-}
 
 .footerLinks {
-	display: none;
+	display: $none;
 }
-
-a.social {
-  display: inline-block;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
-}
-
-
-a.github {
-  background-image: url(../images/github.svg);
-}
-a.googlePlus {
-  background-image: url(../images/google_plus.svg);
-}
-
-a.social:hover {
-  opacity: 1; }

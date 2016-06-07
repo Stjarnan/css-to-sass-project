@@ -357,8 +357,8 @@ th {
   box-sizing: border-box; }
 
 body {
-  background-color: #F5F5F5;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #lightgrey;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300; }
 
 .clearfix::after {
@@ -368,13 +368,24 @@ body {
 
 .main-nav li,
 .main-content .container {
-  background-color: white; }
+  background-color: #fff; }
 
 .container {
   width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 50px 0; }
+  @media (min-width: 768px) {
+    .container {
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    .container {
+      width: 90%;
+      max-width: 1100px; } }
+
+@media (min-width: 768px) {
+  .main-header .container {
+    width: 90%; } }
 
 .container h2 {
   padding-bottom: 50px; }
@@ -382,52 +393,113 @@ body {
 .container h3 {
   font-weight: 400; }
 
+@media (min-width: 768px) {
+  .main-footer .container {
+    width: 50%; } }
+
 .card {
   padding: 0 5% 20px;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .card {
+      padding: 0 2.5% 50px;
+      max-width: 50%;
+      padding: 0 2.5% 50px;
+      float: left; } }
+  @media (min-width: 1024px) {
+    .card {
+      float: left;
+      width: calc(100% / 3); } }
+
+/*  .card p max width prevents layout from breaking while growing */
+@media (min-width: 768px) {
+  .card p {
+    width: 80%;
+    margin: 0 auto; } }
 
 img {
   max-width: 100%; }
 
+@media (min-width: 768px) {
+  .main-nav li,
+  a {
+    display: inline;
+    background-color: #F5F5F5;
+    padding-right: 25px; } }
+
 a {
   text-decoration: none;
   display: block; }
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: black;
-  font-size: 20px;
-  font-weight: 700; }
+  a.social {
+    display: inline-block;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    opacity: .4;
+    transition: all .5s; }
+  a.github {
+    background-image: url(../images/github.svg); }
+  a.googlePlus {
+    background-image: url(../images/google_plus.svg); }
+  a.social:hover {
+    opacity: 1; }
+  a:link, a:visited, a:hover, a:active {
+    color: black;
+    font-size: 20px;
+    font-weight: 700; }
+    @media (min-width: 1024px) {
+      a:link a:link,
+      a:link a:visited,
+      a:link a:hover,
+      a:link a:active, a:visited a:link,
+      a:visited a:visited,
+      a:visited a:hover,
+      a:visited a:active, a:hover a:link,
+      a:hover a:visited,
+      a:hover a:hover,
+      a:hover a:active, a:active a:link,
+      a:active a:visited,
+      a:active a:hover,
+      a:active a:active {
+        color: black;
+        font-size: 15px;
+        font-weight: 700; } }
 
 .footerLinks {
   display: none; }
 
-a.social {
-  display: inline-block;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s; }
-
-a.github {
-  background-image: url(../images/github.svg); }
-
-a.googlePlus {
-  background-image: url(../images/google_plus.svg); }
-
-a.social:hover {
-  opacity: 1; }
-
 .main-header img {
   max-width: 80%; }
+
+@media (min-width: 768px) {
+  .main-header p {
+    text-align: left; } }
+@media (min-width: 1024px) {
+  .main-header p {
+    padding-left: 25px; } }
+
+@media (min-width: 1024px) {
+  .flex-header {
+    display: flex;
+    justify-content: space-between; } }
+
+@media (min-width: 1024px) {
+  .flex-header h1 {
+    margin-top: -2px; } }
+
+@media (min-width: 768px) {
+  .profile {
+    float: right;
+    padding-left: 20px; } }
 
 /* The padding here fixes a problem the left padding caused to the layout. */
 .main-nav ul {
   padding: 0; }
+
+@media (min-width: 768px) {
+  .main-nav {
+    padding-bottom: 50px; } }
 
 .main-nav li,
 .footerLinks {
@@ -436,10 +508,10 @@ a.social:hover {
   padding: 10px; }
 
 .secondary-footer {
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   border-top: solid 1px #C0C0C0;
-  padding: 15px 0;
   width: 90%;
   margin: 0 auto; }
 
@@ -449,6 +521,10 @@ a.social:hover {
 .secondary-footer a {
   font-size: 16px; }
 
+@media (min-width: 768px) {
+  .main-footer .container {
+    width: 70%; } }
+
 .main-footer ul {
   list-style: none; }
 
@@ -456,76 +532,13 @@ a.social:hover {
   display: inline; }
 
 @media (min-width: 768px) {
-  .profile {
-    float: right;
-    padding-left: 20px; }
-
-  .container {
-    width: 100%; }
-
-  .main-header .container {
-    width: 90%; }
-
-  .main-header p {
-    text-align: left; }
-
-  .main-nav {
-    padding-bottom: 50px; }
-
-  .card {
-    max-width: 50%;
-    padding: 0 2.5% 50px;
-    float: left; }
-
-  /*  .card p max width prevents layout from breaking while growing */
-  .card p {
-    width: 80%;
-    margin: 0 auto; }
-
-  .main-nav li,
-  a {
-    display: inline;
-    background-color: #F5F5F5;
-    padding-right: 25px; }
-
-  .backTop {
-    display: none; }
-
-  .main-footer .container {
-    width: 70%; }
-
   .footerLinks,
   .footerLinks li {
     display: inline;
     font-weight: 700; } }
-@media (min-width: 1024px) {
-  .flex-header {
-    display: flex;
-    justify-content: space-between; }
 
-  .flex-header h1 {
-    margin-top: -2px; }
-
-  .main-header p {
-    padding-left: 25px; }
-
-  .container {
-    width: 90%;
-    max-width: 1100px; }
-
-  .main-footer .container {
-    width: 50%; }
-
-  a:link,
-  a:visited,
-  a:hover,
-  a:active {
-    color: black;
-    font-size: 15px;
-    font-weight: 700; }
-
-  .card {
-    float: left;
-    width: calc(100% / 3); } }
+@media (min-width: 768px) {
+  .backTop {
+    display: none; } }
 
 /*# sourceMappingURL=project.css.map */

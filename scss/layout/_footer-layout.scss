@@ -1,25 +1,45 @@
 .secondary-footer {
+    @include padding(15px 0);
 	display: flex;
 	justify-content: space-between;
 	border-top: solid 1px #C0C0C0;
-	padding: 15px 0;
 	width: 90%;
-	margin: 0 auto;
+	margin: $auto;
 }
 
 .secondary-footer p {
     font-weight: 700;
-
 }
 
 .secondary-footer a {
-	font-size: 16px;
+	font-size: $main-font-size;
 	}
+
+.main-footer .container {
+        @include tablet {
+        	width: 70%;
+        }
+    }
 
 .main-footer ul {
 	list-style: none;
 }
 
 .main-footer li {
-	display: inline;
+	display: $inline;
 }
+
+ .footerLinks,
+ .footerLinks li {
+        @include tablet {
+	        display: $inline;
+	    	font-weight: 700;
+        }
+    }
+
+ .backTop {
+        @include tablet {
+        	display: none;
+        }
+    }
+
