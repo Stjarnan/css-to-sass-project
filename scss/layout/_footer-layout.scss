@@ -3,12 +3,12 @@
 	display: flex;
 	justify-content: space-between;
 	border-top: solid 1px #C0C0C0;
-	width: 90%;
+	@extend %width90;
 	margin: $auto;
 }
 
 .secondary-footer p {
-    font-weight: 700;
+    @extend %font700;
 }
 
 .secondary-footer a {

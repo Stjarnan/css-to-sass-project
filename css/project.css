@@ -353,11 +353,17 @@ td,
 th {
   padding: 0; }
 
+.container, .secondary-footer {
+  width: 90%; }
+
+a:link, a:visited, a:hover, a:active, .secondary-footer p {
+  font-weight: 700; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background-color: #lightgrey;
+  background-color: #F5F5F5;
   font-family: "Open Sans", sans-serif;
   font-weight: 300; }
 
@@ -371,7 +377,6 @@ body {
   background-color: #fff; }
 
 .container {
-  width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 50px 0; }
@@ -404,7 +409,6 @@ body {
     .card {
       padding: 0 2.5% 50px;
       max-width: 50%;
-      padding: 0 2.5% 50px;
       float: left; } }
   @media (min-width: 1024px) {
     .card {
@@ -420,12 +424,11 @@ body {
 img {
   max-width: 100%; }
 
-@media (min-width: 768px) {
-  .main-nav li,
-  a {
-    display: inline;
-    background-color: #F5F5F5;
-    padding-right: 25px; } }
+.main-nav li,
+.footerLinks {
+  list-style-type: none;
+  margin-top: 4px;
+  padding: 10px; }
 
 a {
   text-decoration: none;
@@ -446,25 +449,19 @@ a {
     opacity: 1; }
   a:link, a:visited, a:hover, a:active {
     color: black;
-    font-size: 20px;
-    font-weight: 700; }
+    font-size: 20px; }
     @media (min-width: 1024px) {
-      a:link a:link,
-      a:link a:visited,
-      a:link a:hover,
-      a:link a:active, a:visited a:link,
-      a:visited a:visited,
-      a:visited a:hover,
-      a:visited a:active, a:hover a:link,
-      a:hover a:visited,
-      a:hover a:hover,
-      a:hover a:active, a:active a:link,
-      a:active a:visited,
-      a:active a:hover,
-      a:active a:active {
+      a:link, a:visited, a:hover, a:active {
         color: black;
         font-size: 15px;
         font-weight: 700; } }
+
+@media (min-width: 768px) {
+  .main-nav li,
+  a {
+    display: inline;
+    background-color: #F5F5F5;
+    padding-right: 25px; } }
 
 .footerLinks {
   display: none; }
@@ -501,22 +498,12 @@ a {
   .main-nav {
     padding-bottom: 50px; } }
 
-.main-nav li,
-.footerLinks {
-  list-style-type: none;
-  margin-top: 4px;
-  padding: 10px; }
-
 .secondary-footer {
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
   border-top: solid 1px #C0C0C0;
-  width: 90%;
   margin: 0 auto; }
-
-.secondary-footer p {
-  font-weight: 700; }
 
 .secondary-footer a {
   font-size: 16px; }
