@@ -35,6 +35,11 @@
 /* The padding here fixes a problem the left padding caused to the layout. */
 .main-nav ul {
 	@include padding(0);
+
+	@include mobileOnly {
+
+		display: none;
+	}
 }
 
 .main-nav {

@@ -463,6 +463,19 @@ a {
     background-color: #F5F5F5;
     padding-right: 25px; } }
 
+#menubutton {
+  display: none; }
+  @media (max-width: 767px) {
+    #menubutton {
+      background-image: url(../images/menu.svg);
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px;
+      outline: none; } }
+
 .footerLinks {
   display: none; }
 
@@ -493,6 +506,9 @@ a {
 /* The padding here fixes a problem the left padding caused to the layout. */
 .main-nav ul {
   padding: 0; }
+  @media (max-width: 767px) {
+    .main-nav ul {
+      display: none; } }
 
 @media (min-width: 768px) {
   .main-nav {

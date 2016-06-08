@@ -58,6 +58,21 @@ a {
     }
   }
 
+#menubutton {
+  display: none;
+
+  @include mobileOnly {
+    background-image: url(#{$path}/menu.svg);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    outline: none;
+  }
+}
+
 .footerLinks {
 	display: $none;
 }
